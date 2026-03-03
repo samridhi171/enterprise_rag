@@ -7,6 +7,10 @@ from pypdf import PdfReader  # NEW: Library to read PDFs
 st.set_page_config(page_title="Enterprise Data Assistant", layout="wide")
 st.title("🧠 Enterprise AI Assistant (SQL + RAG)")
 
+# --- NEW: Inject Custom CSS ---
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 # --- NEW: Sidebar for Configurations & Uploads ---
 with st.sidebar:
     st.header("⚙️ Configuration")
