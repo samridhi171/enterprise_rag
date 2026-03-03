@@ -1,24 +1,22 @@
-\# 🧠 Enterprise Data Assistant (AI Agent)
+ Enterprise Data Assistant (AI Agent)
 
 
 
-An intelligent, conversational data analysis tool powered by \*\*Google Gemini\*\* and \*\*LangChain\*\*. 
-
+An intelligent, conversational data analysis tool powered by Google Gemini and LangChain
 
 
 Unlike standard chatbots, this application utilizes an autonomous AI Agent capable of writing and executing Python pandas code in the background to analyze massive CSV datasets, perform complex mathematical calculations, and return precise, data-driven answers.
 
 
 
-\## 🚀 Tech Stack
+ Tech Stack
+Frontend: Streamlit
 
-\* \*\*Frontend:\*\* Streamlit
+Backend Framework: LangChain (Experimental Agents)
 
-\* \*\*Backend Framework:\*\* LangChain (Experimental Agents)
+LLM: Google Gemini 2.5 Flash
 
-\* \*\*LLM:\*\* Google Gemini 2.5 Flash
-
-\* \*\*Data Processing:\*\* Python (Pandas)
+Data Processing: Python (Pandas)
 
 
 
