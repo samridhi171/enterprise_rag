@@ -25,3 +25,67 @@ h1 {
     background-color: #161b22;
     border-right: 1px solid #30363d;
 }
+
+/* ========================================================
+   Streamlit Tabs - Enterprise Button Styling
+   ======================================================== */
+   
+/* Remove the default background and add spacing between tabs */
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+    gap: 12px;
+    background-color: transparent;
+}
+
+/* Style the default inactive tabs to look like buttons */
+[data-testid="stTabs"] [data-baseweb="tab"] {
+    background-color: #161b22;
+    border-radius: 6px;
+    padding: 10px 24px;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+}
+
+/* Add a hover effect for inactive tabs */
+[data-testid="stTabs"] [data-baseweb="tab"]:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* Style the ACTIVE tab so it stands out */
+[data-testid="stTabs"] [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #1f6feb; /* Enterprise Blue */
+    color: #ffffff;
+    border-color: #1f6feb;
+    font-weight: 600;
+}
+
+/* Hide the ugly default underline that Streamlit adds */
+[data-testid="stTabs"] [data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* ========================================================
+   Mobile Responsiveness (Media Queries)
+   ======================================================== */
+
+/* 1. Force the tab container to wrap items if it runs out of space */
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+    flex-wrap: wrap; 
+}
+
+/* 2. When the screen is smaller than 768px (Mobile/Tablets) */
+@media (max-width: 768px) {
+    [data-testid="stTabs"] [data-baseweb="tab"] {
+        flex: 1 1 100%; /* Forces each tab button to take up the full width */
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 8px; /* Adds breathing room between stacked buttons */
+    }
+    
+    /* Shrink the main title slightly for mobile */
+    h1 {
+        font-size: 2rem !important;
+    }
+}
